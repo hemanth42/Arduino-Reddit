@@ -4,9 +4,9 @@ Python Script to Check for New Messages on Reddit Account and Output to LED on A
 
 This is a simple script written in Python to check for unread messages on your reddit account and indicate it on an LED on PIN 13 on an Arduino.
 
-The script uses the arudino serial via USB to communicate with the board.
+The script uses the arduino serial via USB to communicate with the board.
 
-This script was only tested on the Arduino Uno R3
+This script was only tested on the Arduino Uno R3.
 
 ## Installation
 
@@ -32,13 +32,12 @@ This script was only tested on the Arduino Uno R3
   
       > First and foremost, upload the code in the serial.ino file into your Arduino board
   
-      > An LED must be connected to the PIN 13 on the Arduino Board, doesn't have to be an LED in particular, you can         connect any thing as long as it's output, like a buzzer.
+      > An LED must be connected to the PIN 13 on the Arduino Board, doesn't have to be an LED in particular, you can connect any thing as long as it's output, like a buzzer.
 
       > Attach your Arduino board to your computer via USB.
   
       > Go to the reddit_arduino.py script and set your Reddit username and password by editing this line: 
            a = daemon("username", "password")
-           
 
       > Run the reddit_arduino.py script from your shell.
 
@@ -48,13 +47,13 @@ This script was only tested on the Arduino Uno R3
 
        > On Windows : COM4
     
-        > On Linux : /dev/ttyACM0
+       > On Linux : /dev/ttyACM0
 
     In case your arduino uses a different serial port, it can be easily changed in the reddit_arduino.py script by editing this line:
     
         > self.led = led_controller()
         
-        Change line that into:
+        Change that line into:
         
         > self.led = led_controller(port=COM1)
         
