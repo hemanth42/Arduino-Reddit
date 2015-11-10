@@ -18,7 +18,8 @@ This script was only tested on the Arduino Uno R3.
        
 ### Note on Dependencies
 
-     These dependencies will be automatically installed, failing which, you can manually install them by typing these commands in your terminal/prompt: 
+These dependencies will be automatically installed, failing which, you can manually install them by typing these commands in your terminal/prompt: 
+
 1.) PRAW (Python Reddit API Wrapper)
 
     Linux: 
