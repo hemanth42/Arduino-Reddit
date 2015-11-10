@@ -38,7 +38,7 @@ class daemon:
 
     def __init__(self, username=None, password=None):
         self.led = led_controller()
-        self.r = praw.Reddit(user_agent="MSGDaemon/Python")
+        self.r = praw.Reddit(user_agent="MailChecker/Python")
         self.r.login(username, password, disable_warning=True)
 
     def get(self):
