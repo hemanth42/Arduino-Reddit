@@ -10,7 +10,9 @@ This script was only tested on the Arduino Uno R3.
 
 ## Installation
 
-### Dependencies
+### Dependencies:
+
+     Note : These dependencies will be automatically installed, failing which, you can manually install them by typing these commands in your terminal/prompt: 
 1.) PRAW (Python Reddit API Wrapper)
 
     Linux: 
@@ -36,10 +38,15 @@ This script was only tested on the Arduino Uno R3.
 
       > Attach your Arduino board to your computer via USB.
   
-      > Go to the reddit_arduino.py script and set your Reddit username and password by editing this line: 
-           a = daemon("username", "password")
+      > Open up your Python Console and type:
+          >> import arduino_reddit
+          >> arduino_reddit.mailcheck("username","password")
 
-      > Run the reddit_arduino.py script from your shell.
+      > Alternatively you can run the checkmail.py script included in the repo which will prompt you for your username and password(which can also be passed as command line arguements depending upon your choice)
+         $ python checkmail.py username password
+      Additionally you can manually assign the serial port number your arduino board used by passing an extra argument:
+         $ python checkmail.py username password port
+      
 
 ## Note
 
@@ -49,15 +56,12 @@ This script was only tested on the Arduino Uno R3.
     
        > On Linux : /dev/ttyACM0
 
-    In case your arduino uses a different serial port, it can be easily changed in the reddit_arduino.py script by editing this line:
+    In case your arduino uses a different serial port, you can manually assign the serial port number your arduino board uses by passing an extra argument:
     
-        > self.led = led_controller()
+          >> import arduino_reddit
+          >> arduino_reddit.mailcheck("username","password","COM4")
         
-        Change that line into:
         
-        > self.led = led_controller(port=COM1)
-        
-        You can pass a the keyword parameter *port* and manually assign the port number
         In Windows, it's this series: COM1, COM2, COM3 ...
         
         In Linux, /dev/ttyACM0, /dev/ttyACM1, /dev/ttyACM2 ...
