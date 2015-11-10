@@ -49,9 +49,9 @@ These dependencies will be automatically installed, failing which, you can manua
           >> import arduino_reddit
           >> arduino_reddit.mailcheck("username","password")
 
-      > Alternatively you can run the checkmail.py script included in the repo which will prompt you for your username and password(which can also be passed as command line arguements depending upon your choice)
+      > Alternatively, you can run the checkmail.py script included in the repo which will prompt you for your username and password(which can also be passed as command line arguments depending upon your choice)
          $ python checkmail.py username password
-      Additionally you can manually assign the serial port number your arduino board used by passing an extra argument:
+      Additionally, you can manually assign the serial port number your arduino board uses by passing an extra argument:
          $ python checkmail.py username password port
       
 
